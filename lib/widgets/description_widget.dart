@@ -6,9 +6,8 @@ class DescriptionWidget extends StatelessWidget {
   final String title;
   final List<String> properties;
   final Axis orientation;
-  const DescriptionWidget({Key key, this.image, this.title,
-   this.properties,
-   this.orientation})
+  const DescriptionWidget(
+      {Key key, this.image, this.title, this.properties, this.orientation})
       : super(key: key);
 
   @override
@@ -23,7 +22,7 @@ class DescriptionWidget extends StatelessWidget {
     var width = MediaQuery.of(context).size.width * factor;
 
     var sizeI = MediaQuery.of(context).size.width * factorI;
-
+    var flex = this.orientation == Axis.horizontal ? 2 : 1;
     return Container(
       height: height,
       width: height,
@@ -32,36 +31,47 @@ class DescriptionWidget extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           border: Border.all(color: Colors.grey)),
-      child: SingleChildScrollView(
-        child: Flex(
-          direction: this.orientation,
-          children: [
-            Image.asset(
-              this.image,
-              height: sizeI,
-              width: sizeI,
+      child: Flex(
+        direction: this.orientation,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Container(
+     
+              child: Image.asset(
+                this.image,
+                height: sizeI,
+                width: sizeI,
+              ),
             ),
-            SizedBox(
-              height: 10,
-              width: 10,
-            ),
-            Container(
-                decoration: BoxDecoration(),
-                child: Column(
-                  children: [
-                    Text(
+          ),
+          // SizedBox(
+          //   height: 10,
+          //   width: 10,
+          // ),
+          Expanded(
+              flex: flex,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Expanded(
+                    child: Text(
                       this.title,
                       style: H1,
                     ),
-                    for (var property in this.properties)
-                      Text(
+                  ),
+                  for (var property in this.properties)
+                    Expanded(
+                      child: Text(
                         property,
                         style: H1,
-                      )
-                  ],
-                ))
-          ],
-        ),
+                      ),
+                    )
+                ],
+              ))
+        ],
       ),
     );
   }
