@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Cartagena",
+        "img":"assets/images/places/cartagena.jpg"
+    },
+
+    {
+        "name": "Nordic Countries",
+        "img":"assets/images/places/nordic.png"
+
+    },
+    {
+        "name": "Japan",
+        "img":"assets/images/places/japan.jpg"
+
+    },
+    {
+        "name": "Moon",
+        "img":"assets/images/places/moon.jpg"
+
+    },
+    {
+        "name": "Africa",
+        "img":"assets/images/places/africa.jpg"
+
+    }
+]

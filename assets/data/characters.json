@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Nikola Tesla",
+        "born":"July 10, 1856",
+        "img":"assets/images/characters/nikola.jpg"
+    },
+    {
+        "name":"Vegeta",
+        "born":"732 Anime World",
+        "img":"assets/images/characters/vegeta.png"
+
+    },
+    {
+        "name":"Roger Federer",
+        "born":"August 8, 1981",
+        "img":"assets/images/characters/roger.jpg"
+
+    },
+    {
+        "name":"Lee Sang-hyeok (Faker)",
+        "born":"May 7, 1996",
+        "img": "assets/images/characters/faker.png"
+    },
+    {
+        "name":"Tony Stark",
+        "born":"May 29. 1970",
+        "img":"assets/images/characters/tony.jpg"
+
+    }
+]
